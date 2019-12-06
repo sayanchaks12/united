@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<!--****************** Pega IAC Scripts ******************-->
+<!--<script src="PegaInternetApplicationComposer.js"></script> -->
+<script src ='https://pega-10x1-dev.se.scb.co.th/prweb/PRServlet?pyActivity=pzIncludeMashupScripts'></script>
+<!--<script type="text/javascript" src="PegaInternetApplicationComposerLog.js"></script>-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+pega.web.config.gatewayURL="https://pega-10x1-dev.se.scb.co.th/prweb/PRServlet";  //YOUR PRPC  SERVER GOES HERE
+pega.web.config.appName="PegaRULES";
+pega.web.config.systemID="default"; 
+pega.web.config.thread="STANDARD";
+pega.web.config.encrypt=false;
+</script>
+<!--****************** Pega IAC Scripts ******************-->
+<head>
+<body>
+<img alt="USERV_logo.png" src="https://pdn.pega.com/sites/pdn.pega.com/files/images/PRPC/articles/1274/USERV_logo.png" style="width: 150px; height: 150px; float: left;" />
+<br><br><h2>​Welcome to your website!</h2>
+
+<!-- ********************** Begin Pega content ********************** -->
+<hr>
+<tr><h2>My Work</h2></tr>
+<div id="PegaGadgetA" style="overflow:auto;width:50%;height:300px;"
+data-pega-gadgetname ='PWGadgetA' 
+data-pega-action ='display' 
+data-pega-action-param-harnessname = "pyMyWorklist"
+data-pega-action-param-classname = "Data-Portal"
+data-pega-isreadonly = "true"
+data-pega-isdeferloaded ='false' 
+data-pega-applicationname ='SSMECredit' 
+data-pega-threadname ='ThreadA' 
+data-pega-systemid ='pega'
+data-pega-resizetype ='stretch' 
+data-pega-url ='https://pega-10x1-dev.se.scb.co.th/prweb/PRServlet' 
+data-pega-redirectguests ='true'
+data-pega-action-param-parameters ="{UserIdentifier:'testuser@ssme',Password:btoa('rules@1234567')}">
+<script> 
+var PWGadgetA = {
+	actionDefinitions:
+	[
+		{
+			action: "openAssignment",
+			target: {
+				type: "_gadget",
+				name: "PWGadgetB"
+			}
+		}
+	]
+};
+</script> 
+</div>
+<div id="PegaGadgetB" style="overflow:auto;width:50%;height:800px;float:right;"
+data-pega-gadgetname ='PWGadgetB'
+data-pega-threadname ='ThreadB'
+data-pega-applicationname ='SSMECredit' 
+data-pega-systemid ='pega'
+data-pega-resizetype ='stretch' 
+data-pega-url ='https://pega-10x1-dev.se.scb.co.th/prweb/PRServlet' 
+data-pega-redirectguests ='true'
+data-pega-action-param-parameters ="{UserIdentifier:'testuser@ssme',Password:btoa('rules@1234567')}">
+<script>
+var PWGadgetB = {
+	actionDefinitions:
+	[
+		{
+			action: "confirm",
+			actionMapping: "refresh",
+			target: {
+				type: "_gadget",
+				name: "PWGadgetA"
+			}
+		}
+	]
+};
+</script>
+</div>
+<hr>
+<!-- ********************** End Pega content ********************** -->
+</body>
+</html>
